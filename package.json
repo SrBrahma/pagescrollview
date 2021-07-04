@@ -1,0 +1,41 @@
+{
+  "name": "pagescrollview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"No test specified.\"",
+    "lint": "eslint --fix \"src/**\"",
+    "clean": "rimraf lib",
+    "build": "npm run clean && tsc",
+    "watch": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "prepublishOnly": "npm run lint && npm run test",
+    "prepare": "npm run build",
+    "start": "npm run watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
+  "devDependencies": {
+    "@types/react-native": "0.64.10",
+    "@typescript-eslint/eslint-plugin": "4.28.1",
+    "@typescript-eslint/parser": "4.28.1",
+    "eslint": "7.30.0",
+    "eslint-config-gev": "2.1.6",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-react-native": "3.11.0",
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.3.5"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
