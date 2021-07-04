@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "sandbox",
-    "slug": "sandbox",
+    "name": "pagescrollview",
+    "slug": "pagescrollview",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Example of PageScrollView component usage.",
+    "githubUrl": "https://github.com/SrBrahma/pagescrollview"
   }
 }

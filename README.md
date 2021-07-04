@@ -68,6 +68,8 @@ const styles = StyleSheet.create({
 });
 ```
 
+[Snack of the code above](https://snack.expo.io/@srbrahma/887706)
+<!-- also in https://expo.io/@srbrahma/pagescrollview but snack seems better -->
 ## Type
 ```ts
 PageScrollView: React.FC<ScrollViewProps & {
