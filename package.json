@@ -1,6 +1,6 @@
 {
   "name": "pagescrollview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple React Native component to have an entire screen ScrollView",
   "main": "./lib/index.js",
   "scripts": {
