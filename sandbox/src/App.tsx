@@ -8,7 +8,7 @@ export function App() {
   return (
     <PageScrollView backgroundColor='#ebf3f3' viewStyle={styles.viewStyle}>
       {[...Array(items)].map((_,i) => {
-        const backgroundColor = `hsl(${Math.floor(Math.random()*360)}, 85%, 65%)`
+        const backgroundColor = `hsl(${Math.floor((360/items)*i)}, 90%, 62%)`
         return (<View key={i} style={[styles.itemView, { backgroundColor }]}>
           <Text style={styles.itemText}>{`${i+1}/${items}`}</Text>
         </View>)

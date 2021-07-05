@@ -39,11 +39,11 @@ import { PageScrollView } from 'pagescrollview'
 
 const items = 20;
 
-export function App() {
+export default () => {
   return (
     <PageScrollView backgroundColor='#ebf3f3' viewStyle={styles.viewStyle}>
       {[...Array(items)].map((_,i) => {
-        const backgroundColor = `hsl(${Math.floor(Math.random()*360)}, 85%, 65%)`
+        const backgroundColor = `hsl(${Math.floor((360/items)*i)}, 90%, 62%)`
         return (<View key={i} style={[styles.itemView, { backgroundColor }]}>
           <Text style={styles.itemText}>{`${i+1}/${items}`}</Text>
         </View>)
@@ -69,7 +69,9 @@ const styles = StyleSheet.create({
 });
 ```
 
-[Snack of the code above](https://snack.expo.io/@srbrahma/887706)
+<img src="./resources/README/example.png" width="50%" height="50%" />
+
+### [Snack of the code above](https://snack.expo.io/@srbrahma/887706)
 <!-- also in https://expo.io/@srbrahma/pagescrollview but snack seems better -->
 ## Type
 ```ts
