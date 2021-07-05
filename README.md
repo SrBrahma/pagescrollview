@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-<img src="./resources/README/example.png" width="20%" height="20%" />
+<img src="./resources/README/example.png" width="25%" height="25%" />
 
 ### 🍟 [Snack of the code above](https://snack.expo.io/@srbrahma/887706)
 <!-- also in https://expo.io/@srbrahma/pagescrollview but snack seems better -->
