@@ -22,7 +22,7 @@ Compatible with Web.
 
 Implementation: [./src/index.tsx](./src/index.tsx)
 
-# Installation
+# 📀 Installation
 ```c
 npm install pagescrollview
 # or
@@ -30,7 +30,7 @@ yarn add pagescrollview
 ```
 
 
-# Usage
+# 📖 Usage
 
 ```tsx
 import React from 'react';
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
 
 <img src="./resources/README/example.png" width="20%" height="20%" />
 
-### [Snack of the code above](https://snack.expo.io/@srbrahma/887706)
+### 🍟 [Snack of the code above](https://snack.expo.io/@srbrahma/887706)
 <!-- also in https://expo.io/@srbrahma/pagescrollview but snack seems better -->
 ## Type
 ```ts
@@ -84,4 +84,4 @@ PageScrollView: React.FC<ScrollViewProps & {
   viewStyle?: StyleProp<ViewStyle>;
 }>
 ```
-# [Changelog](CHANGELOG.md)
+# 📰 [Changelog](CHANGELOG.md)
