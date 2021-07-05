@@ -22,7 +22,7 @@ Compatible with Web.
 
 Implementation: [./src/index.tsx](./src/index.tsx)
 
-# 📀 Installation
+# 💿 Installation
 ```c
 npm install pagescrollview
 # or
