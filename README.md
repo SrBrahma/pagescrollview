@@ -23,7 +23,7 @@ Compatible with Web.
 Implementation: [./src/index.tsx](./src/index.tsx)
 
 # 💿 Installation
-```c
+```bash
 npm install pagescrollview
 # or
 yarn add pagescrollview
