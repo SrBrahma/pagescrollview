@@ -9,7 +9,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![TypeScript](https://badgen.net/npm/types/env-var)](http://www.typescriptlang.org/)
 [![npm](https://img.shields.io/npm/v/pagescrollview)](https://www.npmjs.com/package/pagescrollview)
-[![npm](https://img.shields.io/npm/dw/pagescrollview)](https://www.npmjs.com/package/pagescrollview)
+[![npm](https://img.shields.io/npm/dm/pagescrollview)](https://www.npmjs.com/package/pagescrollview)
 </div>
 
 Very simple React Native / Expo ScrollView component that fills all the available area and have a working scrolling.

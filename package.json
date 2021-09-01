@@ -1,7 +1,7 @@
 {
   "name": "pagescrollview",
-  "version": "1.0.3",
-  "description": "Simple React Native component of a bugless ScrollView with common settings",
+  "version": "1.1.0",
+  "description": "Simple React Native component of a bugfree ScrollView with common settings",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
