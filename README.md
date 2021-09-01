@@ -41,6 +41,8 @@ yarn add pagescrollview
 
 # 📖 Usage
 
+> The usage is actually exactly how you would use the ScrollView, without having to deal with the said bugs above! This example is just to have something pretty in this simple lib!
+
 ```tsx
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
