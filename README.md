@@ -41,7 +41,7 @@ yarn add pagescrollview
 
 # 📖 Usage
 
-> The usage is actually exactly how you would use the ScrollView, without having to deal with the said bugs above! This example is just to have something pretty in this simple lib Readme!
+> The usage is actually exactly how you would use the ScrollView (with the few extra props listed in [Type section below](#type), without having to deal with the said bugs above! This example is just to have something pretty in this simple lib Readme!
 
 ```tsx
 import React from 'react';
