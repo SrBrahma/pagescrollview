@@ -11,13 +11,17 @@
 *
 -->
 
-# 1.0.3 (2021-07-09)
+## 1.1.0 - 2021-09-01
+* Added `keyboardShouldPersistTaps='handled'`
+* Added GitHub Action to auto publish to npm
+
+## 1.0.3 (2021-07-09)
 
 * Updated npm README
 
 # 1.0.0~2 (2021-07-04)
 
-* Released
+* Release
 
 ## 0.1.0 (2021-07-03)
 

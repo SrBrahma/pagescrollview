@@ -18,9 +18,18 @@ It fixes some very common issues in ScrollView: [1](https://github.com/facebook/
 
 I did it because I kept copy-pasting this same component over different RN projects. No more!
 
+
+
+It will also include those commonly used props as default in the ScrollView:
+
+* `overScrollMode='never'` - Won't allow over scrolling.
+* `bounces={false}` - Won't bounce when reaching an extreme.
+* `keyboardShouldPersistTaps='handled'` - [Allows pressing pressables when Keyboard is open. Pressing a non-pressable area will dismiss the keyboard.](https://stackoverflow.com/a/57941568/10247962) - [You will still need to Keyboard.dismiss() to hide the keyboard when pressing a pressable.](https://stackoverflow.com/a/39772206/10247962)
+
 Compatible with Web.
 
 Implementation: [./src/index.tsx](./src/index.tsx)
+
 
 # 💿 Installation
 ```bash

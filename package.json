@@ -1,8 +1,9 @@
 {
   "name": "pagescrollview",
   "version": "1.0.3",
-  "description": "Simple React Native component to have an entire screen ScrollView",
+  "description": "Simple React Native component of a bugless ScrollView with common settings",
   "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "test": "echo \"No test specified.\"",
     "lint": "eslint --fix \"src/**\"",
@@ -16,7 +17,6 @@
   "keywords": ["PageScrollView", "Page", "ScrollView", "React Native", "Expo", "flex-grow", "flex", "fix"],
   "author": "Henrique Bruno (aka SrBrahma)",
   "license": "ISC",
-  "types": "./lib/index.d.ts",
   "files": [
     "/lib"
   ],

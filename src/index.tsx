@@ -19,6 +19,7 @@ export const PageScrollView: React.FC<ScrollViewProps & {
   return (<ScrollView
     overScrollMode='never'
     bounces={false}
+    keyboardShouldPersistTaps='handled'
     contentContainerStyle={[
       styles.container,
       contentContainerStyle,
