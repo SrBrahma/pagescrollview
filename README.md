@@ -31,7 +31,7 @@ Compatible with Web.
 Implementation: [./src/index.tsx](./src/index.tsx)
 
 
-# 💿 Installation
+## 💿 Installation
 ```bash
 npm install pagescrollview
 # or
@@ -39,7 +39,7 @@ yarn add pagescrollview
 ```
 
 
-# 📖 Usage
+## 📖 Usage
 
 > The usage is actually exactly how you would use the ScrollView (with the few extra props listed in [Type section below](#type), without having to deal with the said bugs above! This example is just to have something pretty in this simple lib Readme!
 
@@ -95,4 +95,4 @@ PageScrollView: React.FC<ScrollViewProps & {
   viewStyle?: StyleProp<ViewStyle>;
 }>
 ```
-# 📰 [Changelog](CHANGELOG.md)
+## 📰 [Changelog](CHANGELOG.md)
