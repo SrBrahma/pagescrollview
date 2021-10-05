@@ -10,6 +10,8 @@
 ### Fixed
 *
 -->
+## 1.2.0 - 2021-10-05
+* backgroundColor with priority over viewStyle.
 
 ## 1.1.0 - 2021-09-01
 * Added `keyboardShouldPersistTaps='handled'`
