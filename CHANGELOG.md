@@ -10,6 +10,9 @@
 ### Fixed
 *
 -->
+## 1.2.1 - 2021-10-05
+* backgroundColor with priority over viewStyle **only if defined**.
+
 ## 1.2.0 - 2021-10-05
 * backgroundColor with priority over viewStyle.
 

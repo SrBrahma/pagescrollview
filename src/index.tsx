@@ -26,7 +26,7 @@ export const PageScrollView: React.FC<ScrollViewProps & {
     ]}
     {...rest}
   >
-    <View style={[styles.view, viewStyle, { backgroundColor }]}>
+    <View style={[styles.view, viewStyle, backgroundColor && { backgroundColor }]}>
       {children}
     </View>
   </ScrollView>
