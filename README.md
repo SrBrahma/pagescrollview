@@ -20,7 +20,7 @@ I did it because I kept copy-pasting this same component over different RN proje
 
 
 
-It will also include those commonly used props as default in the ScrollView:
+It alsos includes those commonly used props as default in the ScrollView:
 
 * `overScrollMode='never'` - Won't allow over scrolling.
 * `bounces={false}` - Won't bounce when reaching an extreme.
