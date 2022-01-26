@@ -10,7 +10,7 @@
     "clean": "rimraf lib",
     "build": "npm run clean && tsc",
     "watch": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "prepublishOnly": "npm run lint && npm run test",
+    "prepublishOnly": "npm run test",
     "prepare": "npm run build",
     "start": "npm run watch"
   },
@@ -29,7 +29,7 @@
     "url": "git+https://github.com/SrBrahma/pagescrollview.git"
   },
   "devDependencies": {
-    "@types/react-native": "0.64.10",
+    "@types/react-native": "*",
     "@typescript-eslint/eslint-plugin": "5.10.1",
     "@typescript-eslint/parser": "5.10.1",
     "eslint": "8.7.0",
@@ -37,8 +37,8 @@
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-react-native": "4.0.0",
-    "react": "17.0.2",
-    "react-native": "0.64.2",
+    "react": "*",
+    "react-native": "*",
     "ts-node-dev": "1.1.8",
     "typescript": "4.5.5"
   },
