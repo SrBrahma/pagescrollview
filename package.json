@@ -1,7 +1,7 @@
 {
   "name": "pagescrollview",
   "version": "1.3.0",
-  "description": "Simple React Native component of a bugfree ScrollView with common settings",
+  "description": "React Native ScrollView with common bugs fixed and common settings",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
@@ -14,7 +14,7 @@
     "prepare": "npm run build",
     "start": "npm run watch"
   },
-  "keywords": ["PageScrollView", "Page", "ScrollView", "React Native", "Expo", "flex-grow", "flex", "fix"],
+  "keywords": ["PageScrollView", "Page", "ScrollView", "React Native", "Scroll", "View", "List", "Expo", "FlatList", "flex-grow", "flex", "fix"],
   "author": "Henrique Bruno (aka SrBrahma)",
   "license": "ISC",
   "files": [

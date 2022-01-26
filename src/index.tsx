@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList, ScrollView, ScrollViewProps, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
 
 
+
 export const PageScrollView: React.FC<ScrollViewProps & {
   /** Shortcut to apply the background color to the viewStyle. */
   backgroundColor?: string;
@@ -15,7 +16,7 @@ export const PageScrollView: React.FC<ScrollViewProps & {
    * It is designed to have the same behavior of the normal PageScrollView.
    *
    * Your children will be rendered in `ListFooterComponent`, inside a View with viewStyle prop. */
-  flatList?: boolean
+  flatList?: boolean;
 }> = ({
   backgroundColor,
   contentContainerStyle,
