@@ -32,9 +32,9 @@ export const PageScrollView: React.FC<ScrollViewProps & {
         data={[]}
         contentContainerStyle={{ flexGrow: 1 }} // Required for footer to grow.
         ListFooterComponentStyle={{ flex: 1 }} // Same
-        ListFooterComponent={() => (
-          <View style={[viewStyle, !!backgroundColor && { backgroundColor }]}>{children}</View>
-        )}
+        // If ListFooterComponent was function it would for example lose TextInput focus:
+        // https://github.com/callstack/react-native-paper/issues/736#issuecomment-455680813
+        ListFooterComponent={<View style={[viewStyle, !!backgroundColor && { backgroundColor }]}>{children}</View>}
         bounces={false}
         overScrollMode='never'
         keyboardShouldPersistTaps='handled'

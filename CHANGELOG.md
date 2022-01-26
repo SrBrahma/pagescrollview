@@ -10,6 +10,8 @@
 ### Fixed
 *
 -->
+## 1.3.1 - 2022-01-26
+* Changed `ListFooterComponent` from a function to component, when using `flatList` prop.
 
 ## 1.3.0 - 2022-01-26
 * Added `flatList` prop, to use `FlatList` instead of `ScrollView`, as RN will complain when having
