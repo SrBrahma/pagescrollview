@@ -92,7 +92,14 @@ PageScrollView: React.FC<ScrollViewProps & {
   /** The style of the inner view, where your children will be.
    *
    * You will usually use this to apply the styles. */
-  viewStyle?: StyleProp<ViewStyle>;
+  viewStyle?: StyleProp<ViewStyle>; // Works with ScaledSheet.
+  /** If it shall use FlatList instead of ScrollView. Useful if there is an inner FlatList-like component,
+   * as React Native complains when having a ScrollView Wrapping a VirtualList.
+   *
+   * It is designed to have the same behavior of the normal PageScrollView.
+   *
+   * Your children will be rendered in `ListFooterComponent`, inside a View with viewStyle prop. */
+  flatList?: boolean
 }>
 ```
 ## 📰 [Changelog](CHANGELOG.md)

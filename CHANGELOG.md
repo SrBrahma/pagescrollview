@@ -10,6 +10,11 @@
 ### Fixed
 *
 -->
+
+## 1.3.0 - 2022-01-26
+* Added `flatList` prop, to use `FlatList` instead of `ScrollView`, as RN will complain when having
+a ScrollView wrapping a VirtualList.
+
 ## 1.2.1 - 2021-10-05
 * backgroundColor with priority over viewStyle **only if defined**.
 
