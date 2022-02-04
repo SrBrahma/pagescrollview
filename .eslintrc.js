@@ -1,3 +1,6 @@
+// This is a workaround for https://github.com/eslint/eslint/issues/3458
+require("@rushstack/eslint-patch/modern-module-resolution");
+
 module.exports = {
   "env": {
     "es2021": true,
@@ -11,7 +14,7 @@ module.exports = {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "tsconfigRootDir": __dirname, // *1
-    "project": ['./tsconfig.json'], // *1
+    "project": ['./tsconfig.lint.json'], // *1
     "ecmaVersion": 12,
     "sourceType": "module",
     "ecmaFeatures": { // *2

@@ -10,6 +10,10 @@
 ### Fixed
 *
 -->
+
+## 1.3.2 - 2022-02-04
+* Added export of `PageScrollViewProps`
+
 ## 1.3.1 - 2022-01-26
 * Changed `ListFooterComponent` from a function to component, when using `flatList` prop.
 

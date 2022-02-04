@@ -3,7 +3,7 @@ import { FlatList, ScrollView, ScrollViewProps, StyleProp, StyleSheet, View, Vie
 
 
 
-export const PageScrollView: React.FC<ScrollViewProps & {
+export type PageScrollViewProps = ScrollViewProps & {
   /** Shortcut to apply the background color to the viewStyle. */
   backgroundColor?: string;
   /** The style of the inner view, where your children will be.
@@ -17,7 +17,9 @@ export const PageScrollView: React.FC<ScrollViewProps & {
    *
    * Your children will be rendered in `ListFooterComponent`, inside a View with viewStyle prop. */
   flatList?: boolean;
-}> = ({
+};
+
+export const PageScrollView: React.FC<PageScrollViewProps> = ({
   backgroundColor,
   contentContainerStyle,
   children,
