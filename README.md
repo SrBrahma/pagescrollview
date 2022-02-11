@@ -12,11 +12,11 @@
 [![npm](https://img.shields.io/npm/dm/pagescrollview)](https://www.npmjs.com/package/pagescrollview)
 </div>
 
-Simple React Native / Expo ScrollView component that fills all the available area and have a working scrolling.
+Simple React Native / Expo ScrollView component that fills all the available area and has a working scrolling.
 
 It fixes some very common issues with ScrollView: [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206), [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height), [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable), [4](https://github.com/facebook/react-native/issues/3825)
 
-I did it because I kept copy-pasting this same component over different RN projects. No more!
+I did it because I kept copy-pasting this same component over different RN projects. No more! ✨Packages!✨
 
 
 
