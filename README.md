@@ -16,7 +16,7 @@ Simple React Native / Expo ScrollView component that fills all the available are
 
 It fixes some very common issues with ScrollView: [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206), [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height), [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable), [4](https://github.com/facebook/react-native/issues/3825)
 
-I did it because I kept copy-pasting this same component over different RN projects. No more! ✨Packages!✨
+I did it because I kept copy-pasting this same component over different RN projects. No more!
 
 
 
