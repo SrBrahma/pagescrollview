@@ -1,22 +1,16 @@
-import React from 'react';
-import { FlatList, ScrollView, ScrollViewProps, StyleProp, StyleSheet, View, ViewStyle } from 'react-native';
+import type React from 'react';
+import type { FlatListProps, StyleProp, ViewStyle } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 
 
 
-export type PageScrollViewProps = ScrollViewProps & {
+export type PageScrollViewProps<T = unknown> = Partial<FlatListProps<T>> & {
   /** Shortcut to apply the background color to the viewStyle. */
   backgroundColor?: string;
   /** The style of the inner view, where your children will be.
    *
    * You will usually use this to apply the styles. */
   viewStyle?: StyleProp<ViewStyle>; // Works with ScaledSheet.
-  /** If it shall use FlatList instead of ScrollView. Useful if there is an inner FlatList-like component,
-   * as React Native complains when having a ScrollView Wrapping a VirtualList.
-   *
-   * It is designed to have the same behavior of the normal PageScrollView.
-   *
-   * Your children will be rendered in `ListFooterComponent`, inside a View with viewStyle prop. */
-  flatList?: boolean;
 };
 
 export const PageScrollView: React.FC<PageScrollViewProps> = ({
@@ -24,52 +18,32 @@ export const PageScrollView: React.FC<PageScrollViewProps> = ({
   contentContainerStyle,
   children,
   viewStyle,
-  flatList,
   ...rest
 }) => {
-  if (flatList)
-    return (
-      <FlatList
-        renderItem={null}
-        data={[]}
-        contentContainerStyle={{ flexGrow: 1 }} // Required for footer to grow.
-        ListFooterComponentStyle={{ flex: 1 }} // Same
-        // If ListFooterComponent was function it would for example lose TextInput focus:
-        // https://github.com/callstack/react-native-paper/issues/736#issuecomment-455680813
-        ListFooterComponent={<View style={[viewStyle, !!backgroundColor && { backgroundColor }]}>{children}</View>}
-        bounces={false}
-        overScrollMode='never'
-        keyboardShouldPersistTaps='handled'
-        nestedScrollEnabled
-        {...rest}
-      />
-    );
-
-  else
-    return (<ScrollView
+  return (
+    <FlatList
+      contentContainerStyle={[styles.flexGrow, contentContainerStyle]}
+      ListFooterComponentStyle={[styles.flex, !!backgroundColor && { backgroundColor }, viewStyle]}
+      // If ListFooterComponent was function it would for example lose TextInput focus:
+      // https://github.com/callstack/react-native-paper/issues/736#issuecomment-455680813
+      ListFooterComponent={<>{children}</>}
       bounces={false}
       overScrollMode='never'
       keyboardShouldPersistTaps='handled'
-      contentContainerStyle={[styles.container, contentContainerStyle]}
       nestedScrollEnabled
       {...rest}
-    >
-      <View style={[styles.view, viewStyle, !!backgroundColor && { backgroundColor }]}>
-        {children}
-      </View>
-    </ScrollView>
-    );
+      renderItem={null}
+      data={[]}
+    />
+  );
 };
 
 
 const styles = StyleSheet.create({
-  container: {
-    // https://github.com/facebook/react-native/issues/4099#issuecomment-307541206
-    // If using flex: 1, the screen would fill everything as intended, but the scroll
-    // wouldn't work.
+  flexGrow: {
     flexGrow: 1,
   },
-  view: {
+  flex: {
     flex: 1,
   },
 });

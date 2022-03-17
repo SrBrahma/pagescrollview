@@ -11,6 +11,12 @@
 *
 -->
 
+## 2.0.0-beta.0 - 2022-03-17
+> Beta, not yet unreleased, still testing. Test it via `npm i pagescrollview@2.0.0-beta.0`
+* It now always uses FlatList, to support cases when it wraps another VirualList component (FlatList, SectionList)
+* Removed `flatList` property.
+* Removed wrapping `<View>` in `ListFooterComponent`, now wrapped by a Fragment. Its styles were moved to `ListFooterComponentStyle`.
+
 ## 1.3.2 - 2022-02-04
 * Added export of `PageScrollViewProps`
 
