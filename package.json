@@ -1,6 +1,6 @@
 {
   "name": "pagescrollview",
-  "version": "2.0.0-beta.0",
+  "version": "2.0.0-beta.1",
   "description": "React Native ScrollView with common settings and bugs fixes",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -43,16 +43,9 @@
   },
   "devDependencies": {
     "@types/react-native": "*",
-    "@typescript-eslint/eslint-plugin": "5.10.1",
-    "@typescript-eslint/parser": "5.10.1",
-    "eslint": "8.7.0",
     "eslint-config-gev": "2.33.0",
-    "eslint-plugin-react": "7.28.0",
-    "eslint-plugin-react-hooks": "4.3.0",
-    "eslint-plugin-react-native": "4.0.0",
     "react": "*",
     "react-native": "*",
-    "ts-node-dev": "1.1.8",
     "typescript": "4.5.5"
   },
   "peerDependencies": {
