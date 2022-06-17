@@ -1,44 +1,51 @@
 import type React from 'react';
-import type { FlatListProps } from 'react-native';
+import type { FlatListProps, StyleProp, ViewStyle } from 'react-native';
 import { FlatList, StyleSheet } from 'react-native';
 
 
 
-export type PageScrollViewProps<T = unknown> = Partial<FlatListProps<T>> & {
-  /** Shortcut to apply the background color to the `style`. */
+export type PageScrollViewProps = Omit<FlatListProps<unknown>,
+  'ListFooterComponentStyle' | 'ListFooterComponent' | 'data' | 'renderItem' | 'style' | 'keyExtractor'
+> & {
+  /** Shortcut to apply the backgroundColor to the `style`. */
   backgroundColor?: string;
+  /** The style of the View that wraps your children. Use this for styles such as paddings and
+   * background color. */
+  // Here just to improve the default comment.
+  style?: StyleProp<ViewStyle>;
+  children?: React.ReactNode;
 };
 
-export const PageScrollView: React.FC<PageScrollViewProps> = ({
+export function PageScrollView({
   backgroundColor,
   contentContainerStyle,
   children,
   style,
   ...rest
-}) => {
+}: PageScrollViewProps): JSX.Element {
   return (
     <FlatList
-      contentContainerStyle={[styles.flexGrow, contentContainerStyle]}
+      contentContainerStyle={[styles.container, contentContainerStyle]}
+      ListFooterComponentStyle={[styles.style, !!backgroundColor && { backgroundColor }, style]}
       // If ListFooterComponent was function it would for example lose TextInput focus:
       // https://github.com/callstack/react-native-paper/issues/736#issuecomment-455680813
+      ListFooterComponent={<>{children}</>}
       bounces={false}
       overScrollMode='never'
       keyboardShouldPersistTaps='handled'
       nestedScrollEnabled
       {...rest}
-      style={[styles.flex, style, !!backgroundColor && { backgroundColor }]}
-      renderItem={({ item }) => <>{item}</>}
-      data={[children]}
+      renderItem={null}
+      data={[]}
     />
   );
-};
-
+}
 
 const styles = StyleSheet.create({
-  flexGrow: {
+  container: {
     flexGrow: 1,
   },
-  flex: {
+  style: {
     flex: 1,
   },
 });

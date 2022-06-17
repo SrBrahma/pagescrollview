@@ -11,16 +11,11 @@
 *
 -->
 
-## 2.0.0-beta.1 - 2022-06-14
-> Beta, not yet unreleased, still testing. Test it via `npm i pagescrollview@2.0.0-beta.0`
-* `children` is now rendered on `renderItem` instead of `ListFooterComponent`. This allows using the Header and the Footer.
-* Removed `viewStyle`. You should now use the default `style`.
 
-
-## 2.0.0-beta.0 - 2022-03-17
-* It now always uses FlatList, to support cases when it wraps another VirualList component (FlatList, SectionList)
-* Removed `flatList` property.
+## 2.0.0 - 2022-06-16
+* Removed `flatList` property. It now always uses `FlatList` instead of `ScrollView`, to support common cases when wrapping another VirualList component (FlatList, SectionList).
 * Removed wrapping `<View>` in `ListFooterComponent`, now wrapped by a Fragment. Its styles were moved to `ListFooterComponentStyle`.
+* Removed `viewStyle`. You should now use the default `style`.
 
 ## 1.3.2 - 2022-02-04
 * Added export of `PageScrollViewProps`

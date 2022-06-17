@@ -12,23 +12,23 @@
 [![npm](https://img.shields.io/npm/dm/pagescrollview)](https://www.npmjs.com/package/pagescrollview)
 </div>
 
-Simple React Native / Expo ScrollView component that fills all the available area and has a working scrolling.
+Simple React Native ScrollView-like component interface that fills all the available area and has a working scrolling (!).
 
-It fixes some very common issues with ScrollView: [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206), [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height), [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable), [4](https://github.com/facebook/react-native/issues/3825)
+This fixes some very common issues with ScrollView: [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206), [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height), [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable), [4](https://github.com/facebook/react-native/issues/3825)
 
-I did it because I kept copy-pasting this same component over different RN projects. No more!
+### 2.0.0! - 2022-06-17
+It now uses a FlatList instead of the ScrollView under the hoods, as [FlatLists/SectionLists aren't allowed inside a ScrollView](https://stackoverflow.com/q/58243680/10247962). This doesn't change other behaviors or performance.
 
 
 
-It also includes those commonly used props as default in the ScrollView:
+It also includes those commonly used props as default:
 
 * `overScrollMode='never'` - Won't allow over scrolling.
 * `bounces={false}` - Won't bounce when reaching an extreme.
 * `keyboardShouldPersistTaps='handled'` - [Allows pressing pressables when Keyboard is open. Pressing a non-pressable area will dismiss the keyboard.](https://stackoverflow.com/a/57941568/10247962) - [You will still need to Keyboard.dismiss() to hide the keyboard when pressing a pressable.](https://stackoverflow.com/a/39772206/10247962)
+* `nestedScrollEnabled={true}`
 
-Compatible with Web.
-
-Implementation: [./src/index.tsx](./src/index.tsx)
+**Compatible with Web and Expo.**
 
 
 ## 💿 Installation
@@ -52,7 +52,7 @@ const items = 20;
 
 export default () => {
   return (
-    <PageScrollView backgroundColor='#ebf3f3' viewStyle={styles.viewStyle}>
+    <PageScrollView backgroundColor='#ebf3f3' style={styles.style}>
       {[...Array(items)].map((_,i) => {
         const backgroundColor = `hsl(${Math.floor((360/items)*i)}, 90%, 62%)`
         return (<View key={i} style={[styles.itemView, { backgroundColor }]}>
@@ -64,7 +64,7 @@ export default () => {
 }
 
 const styles = StyleSheet.create({
-  viewStyle: {
+  style: {
     padding: 10,
   },
   itemView: {
@@ -86,20 +86,11 @@ const styles = StyleSheet.create({
 <!-- also in https://expo.io/@srbrahma/pagescrollview but snack seems better -->
 ## Type
 ```ts
-PageScrollView: React.FC<ScrollViewProps & {
-  /** Shortcut to apply the background color to the viewStyle. */
+export type PageScrollViewProps = Partial<Omit<FlatListProps,
+  'ListFooterComponentStyle' | 'ListFooterComponent' | 'data' | 'renderItem' | 'keyExtractor'
+>> & {
+  /** Shortcut to apply the backgroundColor to the `style`. */
   backgroundColor?: string;
-  /** The style of the inner view, where your children will be.
-   *
-   * You will usually use this to apply the styles. */
-  viewStyle?: StyleProp<ViewStyle>; // Works with ScaledSheet.
-  /** If it shall use FlatList instead of ScrollView. Useful if there is an inner FlatList-like component,
-   * as React Native complains when having a ScrollView Wrapping a VirtualList.
-   *
-   * It is designed to have the same behavior of the normal PageScrollView.
-   *
-   * Your children will be rendered in `ListFooterComponent`, inside a View with viewStyle prop. */
-  flatList?: boolean
-}>
+};
 ```
 ## 📰 [Changelog](CHANGELOG.md)
