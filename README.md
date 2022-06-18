@@ -86,9 +86,9 @@ const styles = StyleSheet.create({
 <!-- also in https://expo.io/@srbrahma/pagescrollview but snack seems better -->
 ## Type
 ```ts
-export type PageScrollViewProps = Partial<Omit<FlatListProps,
+export type PageScrollViewProps = Omit<FlatListProps,
   'ListFooterComponentStyle' | 'ListFooterComponent' | 'data' | 'renderItem' | 'keyExtractor'
->> & {
+> & {
   /** Shortcut to apply the backgroundColor to the `style`. */
   backgroundColor?: string;
 };
