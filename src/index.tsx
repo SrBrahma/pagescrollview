@@ -7,10 +7,11 @@ import { FlatList, StyleSheet } from 'react-native';
 export type PageScrollViewProps = Omit<FlatListProps<unknown>,
   'ListFooterComponentStyle' | 'ListFooterComponent' | 'data' | 'renderItem' | 'style' | 'keyExtractor'
 > & {
-  /** Shortcut to apply the backgroundColor to the `style`. */
+  /** Use this to change the backgroundColor. Internally, it changes FlatList's `style` and `ListFooterComponentStyle`.
+   *
+   * We change `style` to have backgroundColor when iOS users overscroll with `bounces`. */
   backgroundColor?: string;
-  /** The style of the View that wraps your children. Use this for styles such as paddings and
-   * background color. */
+  /** The style of the View that wraps your children. Use this for styles such as paddings. */
   // Here just to improve the default comment.
   style?: StyleProp<ViewStyle>;
   children?: React.ReactNode;
@@ -26,7 +27,9 @@ export function PageScrollView({
   return (
     <FlatList
       contentContainerStyle={[styles.container, contentContainerStyle]}
-      ListFooterComponentStyle={[styles.style, !!backgroundColor && { backgroundColor }, style]}
+      ListFooterComponentStyle={[styles.style, style, !!backgroundColor && { backgroundColor }]}
+      // For iOS' overscroll to pull-to-refresh
+      style={{ backgroundColor }}
       // If ListFooterComponent was function it would for example lose TextInput focus:
       // https://github.com/callstack/react-native-paper/issues/736#issuecomment-455680813
       ListFooterComponent={<>{children}</>}

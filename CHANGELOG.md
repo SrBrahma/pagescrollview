@@ -11,6 +11,10 @@
 *
 -->
 
+## 2.2.0 - 2022-06-18
+* `backgroundColor` property now has style priority over `styles` property.
+* `backgroundColor` now also changes `style` besides `ListFooterComponentStyle` to support iOS `bounces`, its overscroll mode to pull-to-refresh.
+
 ## 2.1.0 - 2022-06-18
 * Removed the default `bounces={false}` property. It's a iOS option only and if it's false it won't enable RefreshControl on iOS for some reason.
 

@@ -88,7 +88,9 @@ const styles = StyleSheet.create({
 export type PageScrollViewProps = Omit<FlatListProps,
   'ListFooterComponentStyle' | 'ListFooterComponent' | 'data' | 'renderItem' | 'keyExtractor'
 > & {
-  /** Shortcut to apply the backgroundColor to the `style`. */
+  /** Use this to change the backgroundColor. Internally, it changes FlatList's `style` and `ListFooterComponentStyle`.
+   *
+   * We change `style` to have backgroundColor when iOS users overscroll with `bounces`. */
   backgroundColor?: string;
 };
 ```
