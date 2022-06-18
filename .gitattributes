@@ -1,0 +1,3 @@
+# Else project would show up as JS instead of TS
+# https://dev.to/katkelly/changing-your-repo-s-language-in-github-5gjo
+*.js linguist-detectable=false
