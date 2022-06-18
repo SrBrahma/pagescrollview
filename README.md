@@ -12,9 +12,9 @@
 [![npm](https://img.shields.io/npm/dm/pagescrollview)](https://www.npmjs.com/package/pagescrollview)
 </div>
 
-Simple React Native ScrollView-like component interface that fills all the available area and has a working scrolling (!).
+React Native ScrollView component interface that fills all the available area and has a working scrolling (!).
 
-This fixes some very common issues with ScrollView: [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206), [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height), [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable), [4](https://github.com/facebook/react-native/issues/3825)
+It fixes some very common issues with ScrollView: [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206), [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height), [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable), [4](https://github.com/facebook/react-native/issues/3825)
 
 ### 2.0.0! - 2022-06-17
 It now uses a FlatList instead of the ScrollView under the hoods, as [FlatLists/SectionLists aren't allowed inside a ScrollView](https://stackoverflow.com/q/58243680/10247962). This doesn't change other behaviors or performance.
