@@ -30,7 +30,6 @@ export function PageScrollView({
       // If ListFooterComponent was function it would for example lose TextInput focus:
       // https://github.com/callstack/react-native-paper/issues/736#issuecomment-455680813
       ListFooterComponent={<>{children}</>}
-      bounces={false}
       overScrollMode='never'
       keyboardShouldPersistTaps='handled'
       nestedScrollEnabled

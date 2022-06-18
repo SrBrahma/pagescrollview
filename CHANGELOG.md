@@ -11,6 +11,8 @@
 *
 -->
 
+## 2.1.0 - 2022-06-18
+* Removed the default `bounces={false}` property. It's a iOS option only and if it's false it won't enable RefreshControl on iOS for some reason.
 
 ## 2.0.0 - 2022-06-16
 * Removed `flatList` property. It now always uses `FlatList` instead of `ScrollView`, to support common cases when wrapping another VirualList component (FlatList, SectionList).

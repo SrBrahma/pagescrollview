@@ -23,10 +23,9 @@ It now uses a FlatList instead of the ScrollView under the hoods, as [FlatLists/
 
 It also includes those commonly used props as default:
 
-* `overScrollMode='never'` - Won't allow over scrolling.
-* `bounces={false}` - Won't bounce when reaching an extreme.
 * `keyboardShouldPersistTaps='handled'` - [Allows pressing pressables when Keyboard is open. Pressing a non-pressable area will dismiss the keyboard.](https://stackoverflow.com/a/57941568/10247962) - [You will still need to Keyboard.dismiss() to hide the keyboard when pressing a pressable.](https://stackoverflow.com/a/39772206/10247962)
-* `nestedScrollEnabled={true}`
+* `overScrollMode='never'` - Won't allow over scrolling in Android.
+* `nestedScrollEnabled={true}` - Allows nested scrolling in Android.
 
 **Compatible with Web and Expo.**
 
