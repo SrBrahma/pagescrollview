@@ -37,6 +37,68 @@ npm install pagescrollview
 yarn add pagescrollview
 ```
 
+<details>
+<summary><b>You may be instead interested in a simplified code version</b></summary>
+
+```tsx
+import type { ScrollViewProps, StyleProp, ViewStyle } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+
+
+
+export type PageScrollViewProps = ScrollViewProps & {
+  /** The style of the inner view, where your children will be.
+   *
+   * You will usually use this to apply the styles, such as the `backgroundColor` and `paddings`. */
+  viewStyle?: StyleProp<ViewStyle>;
+};
+
+/** React Native's ScrollView has some bugs in its sizing and scroll (
+ * [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206),
+ * [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height),
+ * [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable),
+ * [4](https://github.com/facebook/react-native/issues/3825)
+ * ).
+ *
+ * This fixes them.
+ *
+ * This is a simplified component of the [pagescrollview package](https://github.com/SrBrahma/pagescrollview)
+ */
+export function PageScrollView({
+  contentContainerStyle,
+  children,
+  viewStyle,
+  ...rest
+}: PageScrollViewProps): JSX.Element {
+  return (<ScrollView
+    bounces={false}
+    overScrollMode='never'
+    keyboardShouldPersistTaps='handled'
+    contentContainerStyle={[styles.container, contentContainerStyle]}
+    nestedScrollEnabled
+    {...rest}
+  >
+    <View style={[styles.view, viewStyle]}>
+      {children}
+    </View>
+  </ScrollView>
+  );
+}
+
+
+const styles = StyleSheet.create({
+  container: {
+    // https://github.com/facebook/react-native/issues/4099#issuecomment-307541206
+    // If using flex: 1, the screen would fill everything as intended, but the scroll wouldn't work.
+    flexGrow: 1,
+  },
+  view: {
+    flex: 1,
+  },
+});
+```
+
+</details>
 
 ## 📖 Usage
 
