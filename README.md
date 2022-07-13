@@ -53,7 +53,7 @@ export type PageScrollViewProps = ScrollViewProps & {
   viewStyle?: StyleProp<ViewStyle>;
 };
 
-/** React Native's ScrollView has some bugs in its sizing and scroll (
+/** React Native's ScrollView has some bugs on its sizing and scroll (
  * [1](https://github.com/facebook/react-native/issues/4099#issuecomment-307541206),
  * [2](https://stackoverflow.com/questions/34880660/react-native-children-of-scrollview-wont-fill-full-height),
  * [3](https://stackoverflow.com/questions/46805135/scrollview-with-flex-1-makes-it-un-scrollable),
